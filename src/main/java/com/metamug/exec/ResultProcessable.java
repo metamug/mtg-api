@@ -1,4 +1,4 @@
-package com.metamug.mtg.interfaces;
+package com.metamug.exec;
 
 import java.util.SortedMap;
 
@@ -16,6 +16,6 @@ public interface ResultProcessable {
      * @param rowCount The number of rows
      * @return Manipulated data in <code>String</code> format
      */
-    public String process(SortedMap[] rowMap, String[] columnNames, int rowCount);
+    public Object process(SortedMap[] rowMap, String[] columnNames, int rowCount);
 
 }
