@@ -6,3 +6,4 @@ nbdist/
 nbactions.xml
 .nb-gradle/
 target/
+nb-configuration.xml
