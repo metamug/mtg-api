@@ -4,7 +4,7 @@
 # mtg-api
 Metamug Code Execution Dependency
 
-```
+```xml
 <dependency>
     <groupId>com.metamug.exec</groupId>
     <artifactId>metamug-api</artifactId>
@@ -14,14 +14,14 @@ Metamug Code Execution Dependency
 
 ### Result Processing
 
-```
+```java
 interface ResultProcessable {
     public Object process(SortedMap[] rowMap, String[] columnNames, int rowCount);
 }
 ```
 Supply the fully qualified class name to classname attribute of Query tag. 
 
-```
+```xml
 <Request method="GET">
 	<Query classname="com.mycompany.handlers.Shortener" >
 	    SELECT id FROM urls WHERE url=$q
@@ -31,7 +31,7 @@ Supply the fully qualified class name to classname attribute of Query tag.
 
 ### Request Handling
 
-```
+```java
  public interface RequestProcessable {
         public Object process(Map<String, String> param, DataSource ds, 
         Map<String, String> requestHeaders);
@@ -39,7 +39,7 @@ Supply the fully qualified class name to classname attribute of Query tag.
 ```
 Use the execute tag inside Request directly to execute code to process the incoming request.
 
-```
+```xml
 <Request method="GET">
     <Execute classname="com.mycompany.schedular.Schedule" />
 </Request>
