@@ -11,7 +11,7 @@ Metamug Code Execution Dependency
 </dependency>
 ```
 
-## Result Processing
+### Result Processing
 
 ```
 interface ResultProcessable {
@@ -28,7 +28,7 @@ Supply the fully qualified class name to classname attribute of Query tag.
 </Request>
 ```
 
-## Request Handling
+### Request Handling
 
 ```
  public interface RequestProcessable {
