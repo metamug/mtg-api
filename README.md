@@ -2,3 +2,11 @@
 
 # mtg-api
 Metamug Code Execution Dependency
+
+```
+<dependency>
+    <groupId>com.metamug.exec</groupId>
+    <artifactId>metamug-api</artifactId>
+    <version>1.1.1</version>
+</dependency>
+```
