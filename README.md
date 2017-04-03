@@ -1,5 +1,7 @@
 [![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.metamug.exec/metamug-api/badge.svg)](http://search.maven.org/#artifactdetails|com.metamug.exec|metamug-api|1.1.1|)
 
+[![Build Status](https://travis-ci.org/metamug/mtg-api.svg?branch=master)](https://travis-ci.org/metamug/mtg-api)
+
 # mtg-api
 Metamug Code Execution Dependency
 
