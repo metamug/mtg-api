@@ -5,8 +5,8 @@ Metamug Code Execution Dependency
 
 ```xml
 <dependency>
-    <groupId>com.metamug.exec</groupId>
-    <artifactId>metamug-api</artifactId>
+    <groupId>com.metamug</groupId>
+    <artifactId>mtg-api</artifactId>
     <version>1.1.1</version>
 </dependency>
 ```
