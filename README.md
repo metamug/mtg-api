@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/metamug/mtg-api.svg?branch=master)](https://travis-ci.org/metamug/mtg-api) [![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.metamug/mtg-api/badge.svg)](http://search.maven.org/#artifactdetails|com.metamug|mtg-api|1.1.1|)
+[![Build Status](https://travis-ci.org/metamug/mtg-api.svg?branch=master)](https://travis-ci.org/metamug/mtg-api) [![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.metamug/mtg-api/badge.svg)](http://search.maven.org/#artifactdetails|com.metamug|mtg-api|1.1.2|)
 
 # mtg-api
 Metamug Code Execution Dependency
