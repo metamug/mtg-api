@@ -58,13 +58,13 @@ package com.metamug.exec;
  *
  * @author Kaisteel
  */
-public interface UploadEventListner {
+public interface UploadListner {
 
     /**
-     * Performs actions whenever a file is uploaded on server.
-     *
+     * Callback method for File upload event.
+     * File is uploaded with POST request on backend.
      * @param event
      */
-    public void actionUploadListner(UploadEvent event);
+    public void uploadPerformed(UploadEvent event);
 
 }
