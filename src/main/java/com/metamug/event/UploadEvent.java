@@ -50,14 +50,14 @@
  *
  *This Agreement shall be governed by the laws of the State of Maharastra, India. Exclusive jurisdiction and venue for all matters relating to this Agreement shall be in courts and fora located in the State of Maharastra, India, and you consent to such jurisdiction and venue. This agreement contains the entire Agreement between the parties hereto with respect to the subject matter hereof, and supersedes all prior agreements and/or understandings (oral or written). Failure or delay by METAMUG in enforcing any right or provision hereof shall not be deemed a waiver of such provision or right with respect to the instant or any subsequent breach. If any provision of this Agreement shall be held by a court of competent jurisdiction to be contrary to law, that provision will be enforced to the maximum extent permissible, and the remaining provisions of this Agreement will remain in force and effect.
  */
-package com.metamug.exec.event;
+package com.metamug.event;
 
 import java.io.File;
 import java.util.Map;
 import javax.sql.DataSource;
 
 /**
- * A semantic event which indicates that a upload action occurred. The event is passed to every UploadEventListener object that registered to receive such events using the actionUploadListener method.
+ * A semantic event which indicates that a upload action occurred. The event is passed to every UploadListener object that registered to receive such events using the UploadListener method.
  *
  * @author Kaisteel
  */
