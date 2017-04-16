@@ -66,8 +66,8 @@ public interface UploadListener {
      * Callback method for File upload event. File is uploaded with POST request on backend.
      *
      * @param event
-     * @param ds DataSource object to connect with Database
+     * @param dataSource DataSource object to connect with Database
      */
-    public void uploadPerformed(UploadEvent event, DataSource ds);
+    public void uploadPerformed(UploadEvent event, DataSource dataSource);
 
 }
