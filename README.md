@@ -43,4 +43,19 @@ Use the execute tag inside Request directly to execute code to process the incom
     <Execute classname="com.mycompany.schedular.Schedule" />
 </Request>
 ```
+# Event
 
+Event Handlers are invoked implicitly. They need not be referenced from resource xml.
+
+### Upload Event
+
+When Upload is performed. The class implemented with following interface is invoked. 
+
+```java
+public interface UploadListener {
+    public void uploadPerformed(UploadEvent event, DataSource dataSource);
+
+}
+```
+
+Read more here. [Metamug Code Execution](https://metamug.com/docs/code-execution.php)
