@@ -77,7 +77,7 @@ public class UploadEvent {
      * @param requestHeaders HTTP Request Header array
      * @param ds DataSource object to connect with Database
      */
-    public UploadEvent(File uploadedFile, String fileName, Map<String, String> paramMap, Map<String, String> requestHeaders, DataSource ds) {
+    public UploadEvent(File uploadedFile, String fileName, Map<String, String> paramMap, Map<String, String> requestHeaders) {
         this.uploadedFile = uploadedFile;
         this.fileName = fileName;
         this.paramMap = paramMap;
@@ -115,14 +115,6 @@ public class UploadEvent {
      */
     public Map<String, String> getRequestHeaders() {
         return requestHeaders;
-    }
-
-    /**
-     *
-     * @return Instance of DataSource to perform database operations
-     */
-    public DataSource getDs() {
-        return ds;
     }
 
 }
