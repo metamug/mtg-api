@@ -54,7 +54,6 @@ package com.metamug.event;
 
 import java.io.File;
 import java.util.Map;
-import javax.sql.DataSource;
 
 /**
  * A semantic event which indicates that a upload action occurred. The event is passed to every UploadListener object that registered to receive such events using the UploadListener method.
@@ -67,7 +66,6 @@ public class UploadEvent {
     private final String fileName;
     private final Map<String, String> paramMap;
     private final Map<String, String> requestHeaders;
-    private final DataSource ds;
 
     /**
      *
@@ -75,14 +73,12 @@ public class UploadEvent {
      * @param fileName Name of uploaded <code>File</code>
      * @param paramMap Map of parameters passed during HTTP request
      * @param requestHeaders HTTP Request Header array
-     * @param ds DataSource object to connect with Database
      */
-    public UploadEvent(File uploadedFile, String fileName, Map<String, String> paramMap, Map<String, String> requestHeaders, DataSource ds) {
+    public UploadEvent(File uploadedFile, String fileName, Map<String, String> paramMap, Map<String, String> requestHeaders) {
         this.uploadedFile = uploadedFile;
         this.fileName = fileName;
         this.paramMap = paramMap;
         this.requestHeaders = requestHeaders;
-        this.ds = ds;
     }
 
     /**
@@ -116,13 +112,4 @@ public class UploadEvent {
     public Map<String, String> getRequestHeaders() {
         return requestHeaders;
     }
-
-    /**
-     *
-     * @return Instance of DataSource to perform database operations
-     */
-    public DataSource getDs() {
-        return ds;
-    }
-
 }

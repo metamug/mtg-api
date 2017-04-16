@@ -52,6 +52,8 @@
  */
 package com.metamug.event;
 
+import javax.sql.DataSource;
+
 /**
  * The listener interface for receiving action events. The class that is interested in processing an action event implements this interface, and the object created with that class is registered with a
  * component, using the component's UploadListener method. When the action event occurs, that object's uploadPerformed method is invoked
@@ -64,7 +66,8 @@ public interface UploadListener {
      * Callback method for File upload event. File is uploaded with POST request on backend.
      *
      * @param event
+     * @param ds DataSource object to connect with Database
      */
-    public void uploadPerformed(UploadEvent event);
+    public void uploadPerformed(UploadEvent event, DataSource ds);
 
 }
