@@ -7,7 +7,7 @@ Metamug Code Execution Dependency
 <dependency>
     <groupId>com.metamug</groupId>
     <artifactId>mtg-api</artifactId>
-    <version>1.1.1</version>
+    <version>1.1.2</version>
 </dependency>
 ```
 
@@ -18,7 +18,7 @@ interface ResultProcessable {
     public Object process(SortedMap[] rowMap, String[] columnNames, int rowCount);
 }
 ```
-Supply the fully qualified class name to classname attribute of Query tag. 
+Supply the fully qualified class name to classname attribute of Query tag.
 
 ```xml
 <Request method="GET">
@@ -32,7 +32,7 @@ Supply the fully qualified class name to classname attribute of Query tag.
 
 ```java
  public interface RequestProcessable {
-        public Object process(Map<String, String> param, DataSource ds, 
+        public Object process(Map<String, String> param, DataSource ds,
         Map<String, String> requestHeaders);
 }
 ```
@@ -49,7 +49,7 @@ Event Handlers are invoked implicitly. They need not be referenced from resource
 
 ### Upload Event
 
-When Upload is performed. The class implemented with following interface is invoked. 
+When Upload is performed. The class implemented with following interface is invoked.
 
 ```java
 public interface UploadListener {
