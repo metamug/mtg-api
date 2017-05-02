@@ -67,7 +67,9 @@ public interface UploadListener {
      *
      * @param event
      * @param dataSource DataSource object to connect with Database
+     * @return Returned object will be converted to JSON/XML depending on accept header 
+     * supplied in the multipart(upload) request
      */
-    public void uploadPerformed(UploadEvent event, DataSource dataSource);
+    public Object uploadPerformed(UploadEvent event, DataSource dataSource);
 
 }
