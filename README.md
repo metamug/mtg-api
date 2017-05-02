@@ -22,9 +22,9 @@ Supply the fully qualified class name to classname attribute of Query tag.
 
 ```xml
 <Request method="GET">
-	<Query classname="com.mycompany.handlers.Shortener" >
-	    SELECT id FROM urls WHERE url=$q
-	</Query>
+    <Query classname="com.mycompany.handlers.Shortener" >
+        SELECT id FROM urls WHERE url=$q
+    </Query>
 </Request>
 ```
 
