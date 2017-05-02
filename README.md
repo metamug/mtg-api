@@ -49,11 +49,12 @@ Event Handlers are invoked implicitly. They need not be referenced from resource
 
 ### Upload Event
 
-When Upload is performed. The class implemented with following interface is invoked.
+When Upload is performed, the class implemented with following interface is invoked.
+The uploaded file can be accessed from event object.
 
 ```java
 public interface UploadListener {
-    public void uploadPerformed(UploadEvent event, DataSource dataSource);
+    public Object uploadPerformed(UploadEvent event, DataSource dataSource);
 
 }
 ```
