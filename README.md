@@ -59,4 +59,11 @@ public interface UploadListener {
 }
 ```
 
+# Install lastest dependency
+
+```sh
+git clone https://github.com/metamug/mtg-api.git
+mvn clean install
+```
+
 Read more here. [Metamug Code Execution](https://metamug.com/docs/code-execution.php)
