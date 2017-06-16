@@ -21,6 +21,10 @@
             <email>kaustubh.damle@metamug.com</email>
             <organization>Metamug Technologies</organization>
             <organizationUrl>http://www.metamug.com</organizationUrl>
+            <roles>
+                <role>Developer</role>
+            </roles>
+            <timezone>+5:30</timezone>
         </developer>
     </developers>
     <scm>
