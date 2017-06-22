@@ -16,7 +16,7 @@ Metamug Code Execution Dependency
 ```java
 package com.mycompany.handlers;
 
-class Shortener implements ResultProcessable {
+public class Shortener implements ResultProcessable {
     public Object process(SortedMap[] rowMap, String[] columnNames, int rowCount){
     	//TODO
     }
@@ -26,18 +26,20 @@ Supply the fully qualified class name to classname attribute of Query tag.
 
 ```xml
 <Request method="GET">
-	<Query classname="com.mycompany.handlers.Shortener" >
-	    SELECT id FROM urls WHERE url=$q
-	</Query>
+    <Query classname="com.mycompany.handlers.Shortener" >
+        SELECT id FROM urls WHERE url=$q
+    </Query>
 </Request>
 ```
 
 ### Request Handling
 
 ```java
- public interface RequestProcessable {
-        public Object process(Map<String, String> param, DataSource ds,
-        Map<String, String> requestHeaders);
+ public class Schedule implements RequestProcessable {
+    public Object process(Map<String, String> param, DataSource ds,
+        Map<String, String> requestHeaders){
+	//TODO		
+    }
 }
 ```
 Use the execute tag inside Request directly to execute code to process the incoming request.
