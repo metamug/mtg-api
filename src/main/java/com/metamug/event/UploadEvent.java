@@ -56,7 +56,7 @@ import java.io.File;
 import java.util.Map;
 
 /**
- * A semantic event which indicates that a upload action occurred. The event is passed to every UploadEventListener object that registered to receive such events using the actionUploadListener method.
+ * A semantic event which indicates that a upload action occurred. The event is passed to every UploadListener object that registered to receive such events using the UploadListener method.
  *
  * @author Kaisteel
  */
@@ -66,21 +66,19 @@ public class UploadEvent {
     private final String fileName;
     private final Map<String, String> paramMap;
     private final Map<String, String> requestHeaders;
-   
+
     /**
      *
      * @param uploadedFile uploaded <code>File</code> object
      * @param fileName Name of uploaded <code>File</code>
      * @param paramMap Map of parameters passed during HTTP request
      * @param requestHeaders HTTP Request Header array
-     * @param ds DataSource object to connect with Database
      */
     public UploadEvent(File uploadedFile, String fileName, Map<String, String> paramMap, Map<String, String> requestHeaders) {
         this.uploadedFile = uploadedFile;
         this.fileName = fileName;
         this.paramMap = paramMap;
         this.requestHeaders = requestHeaders;
-        this.ds = ds;
     }
 
     /**
@@ -114,5 +112,4 @@ public class UploadEvent {
     public Map<String, String> getRequestHeaders() {
         return requestHeaders;
     }
-
 }

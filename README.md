@@ -7,33 +7,39 @@ Metamug Code Execution Dependency
 <dependency>
     <groupId>com.metamug</groupId>
     <artifactId>mtg-api</artifactId>
-    <version>1.1.1</version>
+    <version>1.1.3</version>
 </dependency>
 ```
 
 ### Result Processing
 
 ```java
-interface ResultProcessable {
-    public Object process(SortedMap[] rowMap, String[] columnNames, int rowCount);
+package com.mycompany.handlers;
+
+public class Shortener implements ResultProcessable {
+    public Object process(SortedMap[] rowMap, String[] columnNames, int rowCount){
+    	//TODO
+    }
 }
 ```
-Supply the fully qualified class name to classname attribute of Query tag. 
+Supply the fully qualified class name to classname attribute of Query tag.
 
 ```xml
 <Request method="GET">
-	<Query classname="com.mycompany.handlers.Shortener" >
-	    SELECT id FROM urls WHERE url=$q
-	</Query>
+    <Query classname="com.mycompany.handlers.Shortener" >
+        SELECT id FROM urls WHERE url=$q
+    </Query>
 </Request>
 ```
 
 ### Request Handling
 
 ```java
- public interface RequestProcessable {
-        public Object process(Map<String, String> param, DataSource ds, 
-        Map<String, String> requestHeaders);
+ public class Schedule implements RequestProcessable {
+    public Object process(Map<String, String> param, DataSource ds,
+        Map<String, String> requestHeaders){
+	//TODO		
+    }
 }
 ```
 Use the execute tag inside Request directly to execute code to process the incoming request.
@@ -43,4 +49,28 @@ Use the execute tag inside Request directly to execute code to process the incom
     <Execute classname="com.mycompany.schedular.Schedule" />
 </Request>
 ```
+# Event
 
+Event Handlers are invoked implicitly. They need not be referenced from resource xml.
+
+### Upload Event
+
+When Upload is performed, the class implemented with following interface is invoked.
+The uploaded file can be accessed from event object.
+
+```java
+public CSVUploader implements UploadListener {
+    public Object uploadPerformed(UploadEvent event, DataSource dataSource){
+        //TODO 
+    }
+}
+```
+
+# Install lastest dependency
+
+```sh
+git clone https://github.com/metamug/mtg-api.git
+mvn clean install
+```
+
+Read more here. [Metamug Code Execution](https://metamug.com/docs/code-execution.php)
