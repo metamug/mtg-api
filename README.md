@@ -14,8 +14,12 @@ Metamug Code Execution Dependency
 ### Result Processing
 
 ```java
-interface ResultProcessable {
-    public Object process(SortedMap[] rowMap, String[] columnNames, int rowCount);
+package com.mycompany.handlers;
+
+class Shortener implements ResultProcessable {
+    public Object process(SortedMap[] rowMap, String[] columnNames, int rowCount){
+    	//TODO
+    }
 }
 ```
 Supply the fully qualified class name to classname attribute of Query tag.
