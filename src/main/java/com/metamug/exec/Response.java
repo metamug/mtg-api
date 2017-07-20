@@ -18,11 +18,11 @@ public class Response{
   }
   
   
-  public setHeader(String key, String value){
+  public void setHeader(String key, String value){
     headers.put(key, value);
   }
   
-  public setStatus(int status){
+  public void setStatus(int status){
     this.status = status;
   }
 }
