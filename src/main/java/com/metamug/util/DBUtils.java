@@ -4,7 +4,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-public class DBUtil {
+public class DBUtils {
 
     static int getInt(PreparedStatement statement, String colName) throws SQLException {
         ResultSet rs = statement.executeQuery();
