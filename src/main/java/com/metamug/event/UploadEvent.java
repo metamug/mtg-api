@@ -85,7 +85,7 @@ public class UploadEvent {
      *
      * @return Instance of uploaded File.
      */
-    public File getFile() {
+    public File getUploadedFile() {
         return uploadedFile;
     }
 
