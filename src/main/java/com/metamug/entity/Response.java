@@ -1,4 +1,4 @@
-package com.metamug.exec;
+package com.metamug.entity;
 
 import java.util.Map;
 
