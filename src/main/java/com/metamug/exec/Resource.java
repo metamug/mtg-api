@@ -15,7 +15,7 @@ public class Resource {
         return this.name;
     }
     
-    public float getVersion{
+    public float getVersion(){
         return this.version;   
     }
     
