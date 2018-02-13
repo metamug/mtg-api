@@ -14,7 +14,7 @@ public class Request {
         this.headers = headers;
     }
 
-    public String getMethod{
+    public String getMethod(){
         return this.method;   
     }
     
