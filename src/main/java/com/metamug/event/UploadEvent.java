@@ -21,7 +21,7 @@
  *
  *You may freely distribute exact copies of the Software to anyone.
  *
- *The inclusion of the Software in any shareware, freeware or similar media compilation or distribution method whereby it is made available at cost (ie. sold) is strictly prohibited.
+ *The inclusion of the Software in any Shareware, Freeware or similar media compilation or distribution method whereby it is made available at cost (ie. sold) is strictly prohibited.
  *
  *The selling of the Software is strictly prohibited.
  *2. Restrictions
@@ -53,12 +53,10 @@
 package com.metamug.event;
 
 import java.io.File;
-import java.util.Map;
 import com.metamug.entity.Request;
 
 /**
- * Event for multipart/form-data file upload. The event is passed to 
- * UploadListener object that subscribes to receive such events using the UploadListener method.
+ * Event for multipart/form-data file upload. The event is passed to UploadListener object that subscribes to receive such events using the UploadListener method.
  *
  * @author Kaisteel
  */
@@ -72,8 +70,7 @@ public class UploadEvent {
      *
      * @param uploadedFile uploaded <code>File</code> object
      * @param fileName Name of uploaded <code>File</code>
-     * @param paramMap Map of parameters passed during HTTP request
-     * @param requestHeaders HTTP Request Header array
+     * @param request Request object
      */
     public UploadEvent(File uploadedFile, String fileName, Request request) {
         this.uploadedFile = uploadedFile;
@@ -97,7 +94,6 @@ public class UploadEvent {
         return fileName;
     }
 
-    
     /**
      *
      * @return Get the target request for the upload event.
@@ -105,5 +101,5 @@ public class UploadEvent {
     public Request getTarget() {
         return this.request;
     }
-    
+
 }

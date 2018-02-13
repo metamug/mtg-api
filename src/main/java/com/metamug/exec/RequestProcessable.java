@@ -21,7 +21,7 @@
  *
  *You may freely distribute exact copies of the Software to anyone.
  *
- *The inclusion of the Software in any shareware, freeware or similar media compilation or distribution method whereby it is made available at cost (ie. sold) is strictly prohibited.
+ *The inclusion of the Software in any Shareware, Freeware or similar media compilation or distribution method whereby it is made available at cost (ie. sold) is strictly prohibited.
  *
  *The selling of the Software is strictly prohibited.
  *2. Restrictions
@@ -67,6 +67,7 @@ public interface RequestProcessable {
      * @param ds DataSource object to connect with Database
      * @param requestHeaders HTTP Request Header array.
      * @return Manipulated data in <code>String</code> format
+     * @throws java.lang.Exception
      */
-    public Object process(Map<String, String> param, DataSource ds, Map<String, String> requestHeaders);
+    public Object process(Map<String, String> param, DataSource ds, Map<String, String> requestHeaders) throws Exception;
 }

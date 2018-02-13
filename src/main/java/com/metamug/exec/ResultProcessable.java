@@ -21,7 +21,7 @@
  *
  *You may freely distribute exact copies of the Software to anyone.
  *
- *The inclusion of the Software in any shareware, freeware or similar media compilation or distribution method whereby it is made available at cost (ie. sold) is strictly prohibited.
+ *The inclusion of the Software in any Shareware, Freeware or similar media compilation or distribution method whereby it is made available at cost (ie. sold) is strictly prohibited.
  *
  *The selling of the Software is strictly prohibited.
  *2. Restrictions
@@ -67,7 +67,8 @@ public interface ResultProcessable {
      * @param columnNames The array represents the names of the columns
      * @param rowCount The number of rows
      * @return Manipulated data in <code>String</code> format
+     * @throws java.lang.Exception
      */
-    public Object process(SortedMap[] rowMap, String[] columnNames, int rowCount);
+    public Object process(SortedMap[] rowMap, String[] columnNames, int rowCount) throws Exception;
 
 }
