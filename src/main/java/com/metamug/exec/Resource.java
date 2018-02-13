@@ -23,7 +23,7 @@ public class Resource {
     * Get the role defined in the auth attribute of the resource file.
     */
     public String getRole(){
-        retun this.role;
+        return this.role;
     }
   
 }
