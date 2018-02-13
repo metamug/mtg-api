@@ -6,12 +6,30 @@ public class Request {
 
     private final Map<String, String> params;
     private final Map<String, String> headers;
+    
+    private final String resourceName; 
+    private final String  method;
+    private final float version;
 
     protected Request(Map<String, String> params, Map<String, String> headers) {
         this.params = params;
         this.headers = headers;
     }
+    
+    public String getResourceName(){
+        return this.resourceName;
+    }
+    
+    public float getVersion{
+        return this.version   
+    }
+    
 
+    public String getMethod{
+        return this.method;   
+    }
+    
+    
     public String getHeader(String header) {
         return headers.get(header);
     }
@@ -27,5 +45,5 @@ public class Request {
     public void setParamter(String key, String value) {
         params.put(key, value);
     }
-
+    
 }
