@@ -6,15 +6,21 @@ public class Resource {
     private final String name, role; 
     private final float version;
 
-    protected Resource(String name, float version){
+    protected Resource(String name, String role, float version){
       this.name = name;
       this.version = version;
     }
-    
+  
+    /**
+    * @return name of the resource.
+    */
     public String getName(){
         return this.name;
     }
     
+    /**
+    * @return version number of the resource
+    */
     public float getVersion(){
         return this.version;   
     }
