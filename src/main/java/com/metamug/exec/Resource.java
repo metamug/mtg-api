@@ -9,6 +9,7 @@ public class Resource {
     protected Resource(String name, String role, float version){
       this.name = name;
       this.version = version;
+      this.role = role;
     }
   
     /**
