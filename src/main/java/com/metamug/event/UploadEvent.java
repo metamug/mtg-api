@@ -54,7 +54,7 @@ package com.metamug.event;
 
 import java.io.File;
 import java.util.Map;
-import com.metamug.exec.Request;
+import com.metamug.entity.Request;
 
 /**
  * Event for multipart/form-data file upload. The event is passed to 
