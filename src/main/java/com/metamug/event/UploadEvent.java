@@ -54,9 +54,11 @@ package com.metamug.event;
 
 import java.io.File;
 import java.util.Map;
+import com.metamug.exec.Request;
 
 /**
- * A semantic event which indicates that a upload action occurred. The event is passed to every UploadListener object that registered to receive such events using the UploadListener method.
+ * Event for multipart/form-data file upload. The event is passed to 
+ * UploadListener object that subscribes to receive such events using the UploadListener method.
  *
  * @author Kaisteel
  */
@@ -64,8 +66,7 @@ public class UploadEvent {
 
     private final File uploadedFile;
     private final String fileName;
-    private final Map<String, String> paramMap;
-    private final Map<String, String> requestHeaders;
+    private final Request request;
 
     /**
      *
@@ -74,11 +75,10 @@ public class UploadEvent {
      * @param paramMap Map of parameters passed during HTTP request
      * @param requestHeaders HTTP Request Header array
      */
-    public UploadEvent(File uploadedFile, String fileName, Map<String, String> paramMap, Map<String, String> requestHeaders) {
+    public UploadEvent(File uploadedFile, String fileName, Request request) {
         this.uploadedFile = uploadedFile;
         this.fileName = fileName;
-        this.paramMap = paramMap;
-        this.requestHeaders = requestHeaders;
+        this.request = request;
     }
 
     /**
@@ -97,19 +97,13 @@ public class UploadEvent {
         return fileName;
     }
 
+    
     /**
      *
-     * @return Map of parameter passed during HTTP Request
+     * @return Get the target request for the upload event.
      */
-    public Map<String, String> getParamMap() {
-        return paramMap;
+    public Request getTarget() {
+        return this.request;
     }
-
-    /**
-     *
-     * @return Map of all request HTTP Headers
-     */
-    public Map<String, String> getRequestHeaders() {
-        return requestHeaders;
-    }
+    
 }
