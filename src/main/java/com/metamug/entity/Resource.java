@@ -1,5 +1,5 @@
 
-package com.metamug.exec;
+package com.metamug.entity;
 
 
 public class Resource {
