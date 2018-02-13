@@ -18,6 +18,10 @@ public class Request {
         return this.method;   
     }
     
+    /**
+    * Get information about the requested resource
+    * @return Resource resource object
+    */
     public Resource getResource(){
         return this.resource;
     }
