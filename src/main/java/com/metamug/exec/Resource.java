@@ -1,6 +1,5 @@
 package com.metamug.exec;
 
-import java.util.Map;
 
 public class Resource {
   
@@ -17,14 +16,14 @@ public class Resource {
     }
     
     public float getVersion{
-        return this.version   
+        return this.version;   
     }
     
     /**
     * Get the role defined in the auth attribute of the resource file.
     */
     public String getRole(){
-        retun this.role
+        retun this.role;
     }
   
 }
