@@ -59,12 +59,33 @@ When Upload is performed, the class implemented with following interface is invo
 The uploaded file can be accessed from event object.
 
 ```java
-public CSVUploader implements UploadListener {
+public FileUploader implements UploadListener {
+    
+    @Override
     public Object uploadPerformed(UploadEvent event, DataSource dataSource){
         //TODO 
     }
+    
 }
 ```
+### Timer Event
+
+The Timer Event listener continues to execute after the specified interval. 
+
+```java
+
+@Timer(tick=1000, start="now")
+public Schedular implement TimerListener{
+      
+     @Override
+     public Object timerTriggered(TimerEvent event, DataSource dataSource){
+     	//TODO
+     }
+}
+
+```
+If the `@Timer` annotation is not provided, by default the timer triggers after every 10 seconds.
+
 
 # Install lastest dependency
 
