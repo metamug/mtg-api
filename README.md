@@ -74,7 +74,7 @@ The Timer Event listener continues to execute after the specified interval.
 
 ```java
 
-@Timer(tick=1000, start="now")
+@Timer(tick=1000, start=24000)
 public Schedular implement TimerListener{
       
      @Override
@@ -85,7 +85,7 @@ public Schedular implement TimerListener{
 
 ```
 If the `@Timer` annotation is not provided, by default the timer triggers after every 10 seconds.
-
+The timer can have a delayed start, here we have configured the delay to be 24 seconds.
 
 # Install lastest dependency
 
