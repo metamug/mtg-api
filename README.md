@@ -7,7 +7,7 @@ Metamug Code Execution Dependency
 <dependency>
     <groupId>com.metamug</groupId>
     <artifactId>mtg-api</artifactId>
-    <version>1.1.3</version>
+    <version>1.1.4</version>
 </dependency>
 ```
 
@@ -17,7 +17,7 @@ Metamug Code Execution Dependency
 package com.mycompany.handlers;
 
 public class Shortener implements ResultProcessable {
-    public Object process(SortedMap[] rowMap, String[] columnNames, int rowCount){
+    public Object process(SortedMap[] rowMap, String[] columnNames, int rowCount) throws Exception{
     	//TODO
     }
 }
@@ -36,8 +36,7 @@ Supply the fully qualified class name to classname attribute of Query tag.
 
 ```java
  public class Schedule implements RequestProcessable {
-    public Object process(Map<String, String> param, DataSource ds,
-        Map<String, String> requestHeaders){
+    public Object process(Map<String, String> param, DataSource ds, Map<String, String> requestHeaders) throws Exception{
 	//TODO		
     }
 }
@@ -60,7 +59,7 @@ The uploaded file can be accessed from event object.
 
 ```java
 public CSVUploader implements UploadListener {
-    public Object uploadPerformed(UploadEvent event, DataSource dataSource){
+    public Object uploadPerformed(UploadEvent event, DataSource dataSource) throws Exception{
         //TODO 
     }
 }
