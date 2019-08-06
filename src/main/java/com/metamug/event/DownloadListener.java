@@ -15,7 +15,7 @@
  */
 package com.metamug.event;
 
-import java.io.File;
+import java.io.InputStream;
 import javax.sql.DataSource;
 
 /**
@@ -32,5 +32,5 @@ public interface DownloadListener {
      * @return Returned object will be java.io.File which will be streamed in the response
      * @throws java.lang.Exception
      */
-    public File onDownloadRequest(DownloadEvent event, DataSource dataSource) throws Exception;  
+    public InputStream onDownloadRequest(DownloadEvent event, DataSource dataSource) throws Exception;  
 }
