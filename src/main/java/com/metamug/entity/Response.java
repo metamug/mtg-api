@@ -78,4 +78,12 @@ public class Response {
     public void setStatus(int status) {
         this.status = status;
     }
+    
+    public Object getPayload(){
+        return this.payload;
+    }
+    
+    public int getStatus(){
+        return this.status;
+    }
 }
