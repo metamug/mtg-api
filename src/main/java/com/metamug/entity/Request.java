@@ -110,4 +110,8 @@ public class Request {
     public void setParent(String parent) {
         this.parent = parent;
     }
+
+    public String getParameter(String param) {
+        return params.get(param);
+    }
 }
