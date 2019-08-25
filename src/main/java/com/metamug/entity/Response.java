@@ -67,7 +67,11 @@ public class Response {
     }
 
     public Response(Map<String, String> headers, Object payload) {
+        this(payload);
         this.headers = headers;
+    }
+    
+    public Response(Object payload) {
         this.payload = payload;
     }
 
