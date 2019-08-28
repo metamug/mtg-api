@@ -9,19 +9,19 @@ import java.util.Map;
 public class Response {
 
     private Map<String, String> headers;
-    private InputStream payload;
+    private InputStream body;
     private int status;
 
     public Response() {
     }
 
-    public Response(Map<String, String> headers, InputStream payload) {
-        this(payload);
+    public Response(Map<String, String> headers, InputStream body) {
+        this(body);
         this.headers = headers;
     }
 
-    public Response(InputStream payload) {
-        this.payload = payload;
+    public Response(InputStream body) {
+        this.body = body;
     }
 
     public void setHeader(String key, String value) {
@@ -32,8 +32,12 @@ public class Response {
         this.status = status;
     }
 
-    public InputStream getPayload() {
-        return this.payload;
+    /**
+     *
+     * @return InputStream allows response body to be a text or byte stream
+     */
+    public InputStream getBody() {
+        return this.body;
     }
 
     public int getStatus() {

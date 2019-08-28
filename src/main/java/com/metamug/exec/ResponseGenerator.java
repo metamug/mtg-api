@@ -20,10 +20,16 @@ import com.metamug.entity.Response;
 import java.util.Map;
 
 /**
- *
- * @author pc
+ * This interface is designed as an adapter to generated response
+ * @author themetamug
  */
 public interface ResponseGenerator {
-
-    public Response generate(Request request, Map<String, Object> response);
+    
+    /**
+     * This method allows developers to modify the outgoing response
+     * @param request Request Object generated from HTTP Request
+     * @param responses Map of responses by various processing elements
+     * @return 
+     */
+    public Response generate(Request request, Map<String, Object> responses);
 }
