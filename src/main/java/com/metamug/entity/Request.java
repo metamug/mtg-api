@@ -10,9 +10,12 @@ import java.util.Map;
  */
 public class Request {
 
-    private String uri, id, pid, uid, method, parent;
+    private String uri, id, pid, uid, method;
+    private Resource parent;
+
     private int statusCode;
     protected Map<String, String> params;
+    private Resource resource;
 
     public Request() {
     }
@@ -59,10 +62,20 @@ public class Request {
         return id;
     }
 
+    /**
+     * Get Item Request Id for this resource
+     *
+     * @param id
+     */
     public void setId(String id) {
         this.id = id;
     }
 
+    /**
+     * Get Parent Resource Item Request Id
+     *
+     * @return
+     */
     public String getPid() {
         return pid;
     }
@@ -71,8 +84,13 @@ public class Request {
         this.pid = pid;
     }
 
+    /**
+     * Get authenticated user id for current request.
+     *
+     * @return
+     */
     public String getUid() {
-        return uid;
+        return this.uid;
     }
 
     public void setUid(String uid) {
@@ -103,12 +121,20 @@ public class Request {
         this.statusCode = statusCode;
     }
 
-    public String getParent() {
+    public Resource getParent() {
         return parent;
     }
 
-    public void setParent(String parent) {
+    public void setParent(Resource parent) {
         this.parent = parent;
+    }
+
+    public Resource getResource() {
+        return resource;
+    }
+
+    public void setResource(Resource resource) {
+        this.resource = resource;
     }
 
     public String getParameter(String param) {

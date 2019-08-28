@@ -54,10 +54,11 @@ package com.metamug.entity;
 
 public class Resource {
 
-    private final String name, url, parent;
+    private final String name, url;
+    private final Resource parent;
     private final float version;
 
-    public Resource(String name, float version, String url, String parent) {
+    public Resource(String name, float version, String url, Resource parent) {
         this.name = name;
         this.version = version;
         this.url = url;
@@ -74,7 +75,7 @@ public class Resource {
     /**
      * @return parent of this resource
      */
-    public String getParent() {
+    public Resource getParent() {
         return this.parent;
     }
 
