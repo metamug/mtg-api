@@ -17,6 +17,26 @@
     </licenses>
     <developers>
         <developer>
+            <name>Anish Hirlekar</name>
+            <email>anish.hirlekar@metamug.com</email>
+            <organization>Metamug Technologies</organization>
+            <organizationUrl>http://www.metamug.com</organizationUrl>
+            <roles>
+                <role>Developer</role>
+            </roles>
+            <timezone>+5:30</timezone>
+        </developer>
+		<developer>
+            <name>Deepak Mishra</name>
+            <email>deepak.mishra@metamug.com</email>
+            <organization>Metamug Technologies</organization>
+            <organizationUrl>http://www.metamug.com</organizationUrl>
+            <roles>
+                <role>Developer</role>
+            </roles>
+            <timezone>+5:30</timezone>
+        </developer>
+		<developer>
             <name>Kaustubh Damle</name>
             <email>kaustubh.damle@metamug.com</email>
             <organization>Metamug Technologies</organization>

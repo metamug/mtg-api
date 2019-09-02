@@ -7,7 +7,7 @@ Metamug Code Execution Dependency
 <dependency>
     <groupId>com.metamug</groupId>
     <artifactId>mtg-api</artifactId>
-    <version>1.1.6</version>
+    <version>1.2.0</version>
 </dependency>
 ```
 
