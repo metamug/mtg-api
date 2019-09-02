@@ -15,7 +15,7 @@ public class Resource {
         this.parent = parent;
     }
 
-    public Resource(String name, float versoin) {
+    public Resource(String name, float version) {
         this.name = name;
         this.version = version;
     }

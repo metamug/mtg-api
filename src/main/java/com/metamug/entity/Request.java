@@ -32,6 +32,7 @@ public class Request {
         this.uid = request.uid;
         this.method = request.method;
         this.parent = request.parent;
+        this.resource = request.resource;
         this.statusCode = request.statusCode;
         this.params = request.params;
     }
@@ -130,7 +131,7 @@ public class Request {
     }
 
     public Resource getResource() {
-        return resource;
+        return this.resource;
     }
 
     public void setResource(Resource resource) {
