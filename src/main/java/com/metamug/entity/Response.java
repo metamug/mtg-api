@@ -9,7 +9,7 @@ import java.util.Map;
 public class Response {
 
     private Map<String, String> headers;
-    private InputStream body;
+    private Object body;
     private int status;
 
     public Response() {
@@ -20,7 +20,7 @@ public class Response {
         this.headers = headers;
     }
 
-    public Response(InputStream body) {
+    public Response(Object body) {
         this.body = body;
     }
 
@@ -36,7 +36,7 @@ public class Response {
      *
      * @return InputStream allows response body to be a text or byte stream
      */
-    public InputStream getBody() {
+    public Object getPayload() {
         return this.body;
     }
 

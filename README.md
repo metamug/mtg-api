@@ -55,7 +55,8 @@ Event Handlers are invoked implicitly. They need not be referenced from resource
 ### Upload Event
 
 When Upload is performed, the class implemented with following interface is invoked.
-The uploaded file can be accessed from event object.
+The uploaded file can be accessed from event object. The upload event is an implicit element
+which returns a response to the bus.
 
 ```java
 public CSVUploader implements UploadListener {

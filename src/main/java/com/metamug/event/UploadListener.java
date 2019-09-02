@@ -1,5 +1,6 @@
 package com.metamug.event;
 
+import com.metamug.entity.Response;
 import javax.sql.DataSource;
 
 /**
@@ -18,5 +19,5 @@ public interface UploadListener {
      * @return Returned object will be converted to JSON/XML depending on accept header supplied in the multipart(upload) request
      * @throws java.lang.Exception
      */
-    public Object uploadPerformed(UploadEvent event, DataSource dataSource) throws Exception;
+    public Response uploadPerformed(UploadEvent event, DataSource dataSource) throws Exception;
 }
