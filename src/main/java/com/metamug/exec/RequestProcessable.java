@@ -18,5 +18,5 @@ public interface RequestProcessable {
      * @return Response Entity data in <code>String</code> format
      * @throws java.lang.Exception
      */
-    public Response process(Request request, DataSource ds, Map<String, String> args) throws Exception;
+    public Response process(Request request, DataSource ds, Map<String, Object> args) throws Exception;
 }
