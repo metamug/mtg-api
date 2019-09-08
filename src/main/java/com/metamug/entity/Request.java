@@ -14,6 +14,7 @@ public class Request {
     private Resource parent;
 
     private int statusCode;
+    private String acceptHeader;
     protected Map<String, String> params;
     private Resource resource;
 
@@ -141,4 +142,6 @@ public class Request {
     public String getParameter(String param) {
         return params.get(param);
     }
+    
+    
 }

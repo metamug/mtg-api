@@ -1,6 +1,7 @@
 package com.metamug.exec;
 
 import com.metamug.entity.Response;
+import java.util.Map;
 import java.util.SortedMap;
 
 /**
@@ -18,5 +19,5 @@ public interface ResultProcessable {
      * @return Response data
      * @throws java.lang.Exception
      */
-    public Response process(SortedMap[] rowMap, String[] columnNames, int rowCount) throws Exception;
+    public Response process(Map[] rowMap, String[] columnNames, int rowCount) throws Exception;
 }

@@ -10,7 +10,7 @@ import java.util.SortedMap;
 public interface ResponseProcessable {
      /**
      * Performs operation response object from XRequest and other elements with Response
-     *
+     * It is similar to ResultProcessable for Database Results
      * @param response Response object resulting from XRequest
      * @return Response data
      * @throws java.lang.Exception
