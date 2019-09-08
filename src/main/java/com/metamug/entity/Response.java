@@ -1,6 +1,7 @@
 package com.metamug.entity;
 
 import java.io.InputStream;
+import java.util.HashMap;
 import java.util.Map;
 
 /**
@@ -15,13 +16,14 @@ public class Response {
     public Response() {
     }
 
-    public Response(Map<String, String> headers, InputStream body) {
+    public Response(Map<String, String> headers, Object body) {
         this(body);
         this.headers = headers;
     }
 
     public Response(Object body) {
         this.body = body;
+        this.headers = new HashMap<>();
     }
 
     public void setHeader(String key, String value) {
