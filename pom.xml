@@ -3,10 +3,10 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.metamug</groupId>
     <artifactId>mtg-api</artifactId>
-    <version>1.2.0</version>
+    <version>1.5.0</version>
     <packaging>jar</packaging>
     <name>com.metamug:mtg-api</name>
-    <description>Interfaces to write custom logic</description>
+    <description>API SDK</description>
     <url>https://api.metamug.com</url>
     <licenses>
         <license>

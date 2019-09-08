@@ -14,10 +14,7 @@ public interface ResultProcessable {
     /**
      * Performs operation on data received from SELECT statement
      *
-     * @param rowMap The SortedMap object key is the ColumnName and the value is
-     * the ColumnValue
-     * @param columnNames The array represents the names of the columns
-     * @param rowCount The number of rows
+     * @param queryResult
      * @return Response data
      * @throws java.lang.Exception
      */
