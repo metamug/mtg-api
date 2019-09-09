@@ -21,15 +21,17 @@ import java.util.Map;
 
 /**
  * This interface is designed as an adapter to generated response
+ *
  * @author themetamug
  */
 public interface ResponseGenerator {
-    
+
     /**
      * This method allows developers to modify the outgoing response
+     *
      * @param request Request Object generated from HTTP Request
-     * @param responses Map of responses by various processing elements
-     * @return 
+     * @param outputMap Map of responses by various processing elements
+     * @return
      */
-    public Response generate(Request request, Map<String, Object> responses);
+    public Response generate(Request request, Map<String, Object> outputMap);
 }
