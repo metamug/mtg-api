@@ -18,46 +18,34 @@ package com.metamug.entity;
 import java.util.Map;
 
 /**
- * SQL Query Result
+ * SQL Query Result. 
  *
  * @author themetamug
  */
 public class Result {
-
-    Map[] rowMap;
-    String[] columnNames;
-    int rowCount;
+    
+    //@TODO Can this be made final or immutable 
+    
+    private Map[] recordMap;
+    private String[] columnNames;
+    private int rowCount;
 
     public Result(Map[] rowMap, String[] columnNames, int rowCount) {
-        this.rowMap = rowMap;
+        this.recordMap = rowMap;
         this.columnNames = columnNames;
         this.rowCount = rowCount;
-    }
-
-    
-    
-    public Map[] getRowMap() {
-        return rowMap;
-    }
-
-    public void setRowMap(Map[] rowMap) {
-        this.rowMap = rowMap;
     }
 
     public String[] getColumnNames() {
         return columnNames;
     }
 
-    public void setColumnNames(String[] columnNames) {
-        this.columnNames = columnNames;
-    }
-
     public int getRowCount() {
         return rowCount;
     }
 
-    public void setRowCount(int rowCount) {
-        this.rowCount = rowCount;
+    public Map[] getRecordMap() {
+        return recordMap;
     }
 
 }
