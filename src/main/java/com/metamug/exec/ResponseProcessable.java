@@ -1,7 +1,6 @@
 package com.metamug.exec;
 
 import com.metamug.entity.Response;
-import java.util.SortedMap;
 
 /**
  * 

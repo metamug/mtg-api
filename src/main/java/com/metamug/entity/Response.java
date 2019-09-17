@@ -25,9 +25,9 @@ public class Response {
         this.headers = headers;
     }
 
-    public Response(Object body) throws ClassNotFoundException {
+    public Response(Object body) {
         if(!(body instanceof DTO)){
-            throw new ClassNotFoundException("Payload object does not implement DTO interface!");
+            throw new TypeNotPresentException(DTO.class.getName(), new Throwable("Payload object does not implement DTO interface!"));
         }
             
         this.body = body;
