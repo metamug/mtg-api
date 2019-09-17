@@ -6,35 +6,25 @@ import java.util.Map;
 /**
  * Response return after processing the request
  */
-public class Response {
+public class Response <T extends String & DTO> {
 
     private Map<String, String> headers;
-    private Object body;
+    private T body;
     private int status;
 
     public Response() {
     }
 
-    public Response(Map<String, String> headers, Object body) throws ClassNotFoundException {
+    public Response(Map<String, String> headers, T body) {
         this(body);    
         this.headers = headers;
     }
-    
-    public Response(Map<String, String> headers, String body) {
-        this(body);
-        this.headers = headers;
-    }
 
-    public Response(Object body) {
-        if(!(body instanceof DTO)){
+    public Response(T body) {
+        /*if(!(body instanceof DTO)){
             throw new TypeNotPresentException(DTO.class.getName(), new Throwable("Payload object does not implement DTO interface!"));
-        }
+        }*/
             
-        this.body = body;
-        this.headers = new HashMap<>();
-    }
-    
-    public Response(String body) {
         this.body = body;
         this.headers = new HashMap<>();
     }
@@ -60,7 +50,7 @@ public class Response {
     }
 
   
-    public void setPayload(Object body) {
+    public void setPayload(T body) {
         this.body = body;
     }
 
