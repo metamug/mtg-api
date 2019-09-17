@@ -15,12 +15,26 @@ public class Response {
     public Response() {
     }
 
-    public Response(Map<String, String> headers, Object body) {
+    public Response(Map<String, String> headers, Object body) throws ClassNotFoundException {
+        this(body);    
+        this.headers = headers;
+    }
+    
+    public Response(Map<String, String> headers, String body) {
         this(body);
         this.headers = headers;
     }
 
-    public Response(Object body) {
+    public Response(Object body) throws ClassNotFoundException {
+        if(!(body instanceof DTO)){
+            throw new ClassNotFoundException("Payload object does not implement DTO interface!");
+        }
+            
+        this.body = body;
+        this.headers = new HashMap<>();
+    }
+    
+    public Response(String body) {
         this.body = body;
         this.headers = new HashMap<>();
     }
