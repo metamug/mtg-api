@@ -5,6 +5,7 @@ import java.util.Map;
 
 /**
  * Response return after processing the request
+ * @param <T> can be String or an object implementing DTO interface
  */
 public class Response <T extends String & DTO> {
 
@@ -19,12 +20,8 @@ public class Response <T extends String & DTO> {
         this(body);    
         this.headers = headers;
     }
-
+    
     public Response(T body) {
-        /*if(!(body instanceof DTO)){
-            throw new TypeNotPresentException(DTO.class.getName(), new Throwable("Payload object does not implement DTO interface!"));
-        }*/
-            
         this.body = body;
         this.headers = new HashMap<>();
     }
@@ -53,12 +50,12 @@ public class Response <T extends String & DTO> {
     public void setPayload(T body) {
         this.body = body;
     }
-
+   
     /**
      *
      * @return InputStream allows response body to be a text or byte stream
      */
-    public Object getPayload() {
+    public T getPayload() {
         return this.body;
     }
 
