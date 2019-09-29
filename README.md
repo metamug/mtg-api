@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/metamug/api-sdk.svg?branch=master)](https://travis-ci.org/metamug/api-sdk) [![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.metamug/mtg-api/badge.svg)](http://search.maven.org/#artifactdetails|com.metamug|mtg-api|1.5|)
+[![Build Status](https://travis-ci.org/metamug/api-sdk.svg?branch=master)](https://travis-ci.org/metamug/mtg-api) [![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.metamug/mtg-api/badge.svg)](http://search.maven.org/#artifactdetails|com.metamug|mtg-api|1.5|)
 
 # Metamug API SDK
 
