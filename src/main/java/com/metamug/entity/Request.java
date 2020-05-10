@@ -7,11 +7,11 @@ import java.util.Map;
  *
  * @author deepak
  */
-public class Request {
+public class Request<T> {
 
     private String uri, id, pid, uid, method;
     private Resource parent;
-
+    private T body;
     private int statusCode;
     private String acceptHeader;
     protected Map<String, String> params;
@@ -42,6 +42,14 @@ public class Request {
         this.id = id;
         this.method = method;
         this.params = map;
+    }
+    
+    public T getBody(){
+        return body;
+    }
+    
+    public void setBody(T payload){
+        this.body = payload;
     }
 
     public void setDefault(String parameter, String defaultValue) {
