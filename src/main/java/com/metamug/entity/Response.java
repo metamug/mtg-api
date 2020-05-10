@@ -7,7 +7,7 @@ import java.util.Map;
  * Response return after processing the request
  * @param <T> can be String or an object implementing DTO interface
  */
-public class Response <T extends String & DTO> {
+public class Response <T> {
 
     private Map<String, String> headers;
     private T body;
