@@ -72,12 +72,14 @@ public class Request {
     }
 
     /**
-     * Get Item Request Id for this resource
+     * Set Item Request Id for this resource
      *
      * @param id
      */
     public void setId(String id) {
-        this.id = id;
+        if(id != null && !id.trim().isEmpty()){
+            this.id = id;    
+        }
     }
 
     /**
@@ -109,7 +111,9 @@ public class Request {
     public String getMethod() {
         return method;
     }
-
+    
+    
+    @Deprecated
     public void setMethod(String method) {
         this.method = method;
     }
@@ -118,6 +122,7 @@ public class Request {
         return params;
     }
 
+    @Deprecated
     public void setParams(Map<String, String> params) {
         this.params = params;
     }

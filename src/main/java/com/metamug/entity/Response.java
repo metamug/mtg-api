@@ -9,7 +9,7 @@ import java.util.Map;
  */
 public class Response <T> {
 
-    private Map<String, String> headers;
+    private Map<String, String> headers = new HashMap<>();
     private T body;
     private int status;
 
